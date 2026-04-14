@@ -1,0 +1,51 @@
+#include<stdio.h>
+
+void menu(){ 
+    printf("----Menu do aluno----");
+    printf("Selecione a opcao abaixo que gostaria:\n");
+    printf("1 - Calcular Média do Aluno;\n");
+    printf("2 - Verificar presenca do Aluno - Aprovado ou Reprovado.\n");
+}
+
+int main(){
+
+    int opcao, presenca;
+    float nota_1, nota_2, media;
+    // MENU
+    menu();
+
+    printf("Escolha a opcao desejada:");
+    scanf("%d", &opcao);
+    switch(opcao){
+
+        case 1:     
+        printf("Calculo da Media\n"); // Media do aluno
+        printf("Digite sua primeira nota:");
+        scanf("%f", &nota_1);
+        printf("Digite sua segunda nota:");
+        scanf("%f", &nota_2);
+        media = (nota_1 + nota_2)/2;
+        printf("A Media é: %.2f", media);
+        break;
+
+        case 2:
+        printf("Verificar presenca\n"); // Presenca do aluno
+        printf("Digite a frequencia do aluno(0-100):");
+        scanf("%d", &presenca);
+        if(presenca >= 75 && presenca < 101 || media >= 6){
+            printf("Aluno Aprovado!");
+        }else if(presenca < 75 && presenca >=0){
+            printf("Aluno Reprovado!");
+        }else{
+            printf("Valor de presenca invalido!");
+        }
+        break;
+
+        default:
+        printf("Opcao invalida!");
+
+    }
+    
+    return 0;
+
+}
