@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+void mostrar_matriz(int lin, int colu){
+    int i, j;
+    for(i = 0; i < lin; i++){
+        for(j = 0; j < colu; j++){
+            printf("(%d,%d)", i, j);
+        }
+        printf("\n");
+    }
+    
+}
+
+
+int main(){
+    int linha, coluna;
+    printf("Digite o tamanho da matriz:");
+    printf("Vamos comecar com o tamanho da linha:");
+    scanf("%d", &linha);
+    printf("Agora o tamanho da coluna:");
+    scanf("%d", &coluna);
+    int matriz_num[linha][coluna];
+    int i, j;
+    mostrar_matriz = (linha, coluna);
+    for(i = 0; i < linha; i++){
+        for(j = 0; j < coluna; j++){
+            printf("Digite o elemento da posicao linha %d e coluna %d:", i, j);
+            scanf("%d", &matriz_num[i][j]);
+        }
+    }
+    printf("\n");
+    printf("===Matriz construida===\n");
+    for(i = 0; i < linha; i++){
+        for(j = 0; j < coluna; j++){
+            printf("|%d|", matriz_num[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
