@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main(){
+    char alunos[3][50];
+    int i;
+    printf("Registro de aluno:");
+    for(i = 0; i < 3; i++){
+        printf("Digite o nome do aluno %d", i + 1);
+        fgets(alunos[i], 50, stdin);
+    }
+    printf("\n");
+    printf("%c\n", alunos[0][0]);
+    printf("%s\n", alunos[0]);
+    for(i = 0; i < 3; i++){
+        printf("%s\n", alunos[i]);
+    }
+    return 0;
+}
